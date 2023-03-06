@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Rubik:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@font-face {
+  font-family: "gotesk_black";
+  src: url("./assets/fonts/PPRadioGrotesk-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "gotesk_regular";
+  src: url("./assets/fonts/PPRadioGrotesk-Regular.otf") format("opentype");
+}
+
+
+
+.herobg {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 80% 61%,
+      hsla(0, 42%, 15%, 0.7) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 54% 34%, hsla(289, 78%, 18%, 0.64) 0px, transparent 50%);
+}
+
+body{
+  font-family: Rubik, sans-serif
+}
+
+.caption{
+  font-family: gotesk_regular;
+}
+
+.stack {
+  border-radius: 20px
+}
+
+.stack.side{
+  border: 1px #f1eded solid;
+  @apply bg-white/25 p-3;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+
+}
+.stack.main{
+  background-color:hsla(0,0%,100%,1);
+background-image:
+radial-gradient(at 79% 37%, hsla(315,62%,60%,1) 0px, transparent 50%),
+radial-gradient(at 40% 20%, hsla(265,76%,68%,1) 0px, transparent 50%),
+radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(256,55%,94%,1) 0px, transparent 50%),
+radial-gradient(at 76% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(254,100%,77%,1) 0px, transparent 50%),
+radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%);
+}
+
+.intro-text{
+  background-color:hsla(0,0%,100%,1);
+background-image:
+radial-gradient(at 90% 76%, hsla(315,62%,60%,1) 0px, transparent 50%),
+radial-gradient(at 45% 100%, hsla(254,100%,77%,1) 0px, transparent 50%),
+radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%);
+background-clip: text;
+color: transparent
+}
+
+.sidefill{
+  fill: #f1f1f1
+}
