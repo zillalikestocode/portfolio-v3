@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "gotesk_regular";
+  font-family: "grotesk";
   src: url("./assets/fonts/PPRadioGrotesk-Regular.otf") format("opentype");
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 .caption {
-  font-family: gotesk_regular;
+  font-family: grotesk;
 }
 
 .stack {
@@ -97,6 +97,34 @@ body {
 }
 
 .blog-ad h4 {
-  font-family: gotesk_regular, sans-serif;
+  font-family: grotesk, sans-serif;
   @apply tracking-wider;
+}
+
+.project{
+  height: 500px;
+  width: 500px
+}
+
+.project img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.project:nth-child(1){
+  margin-left: 300px
+}
+
+.project-description{
+  position: absolute;
+  top: 250px;
+  @apply w-96;
+  font-family: Rubik, sans-serif;
+}
+
+.stack-bullets button {
+  backdrop-filter: blur(5px);
+  border: 1px #f1eded solid;
+  @apply bg-white/[.10] p-2 px-3 rounded-full;
 }
