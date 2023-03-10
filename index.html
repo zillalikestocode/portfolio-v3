@@ -8,7 +8,28 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="w-screen">
+    <div id="main" class="w-screen overflow-hidden">
+      <div class="fixed w-screen loader z-20 h-screen top-0 left-0">
+        <div class="flex h-screen w-screen">
+          <div class="w-full h-full bg-white blinder"></div>
+          <div class="w-full h-full bg-white blinder"></div>
+          <div class="w-full h-full bg-white blinder"></div>
+          <div class="w-full h-full bg-white blinder"></div>
+          <div class="w-full h-full bg-white blinder"></div>
+        </div>
+        <div class="absolute flex justify-center gap-10 w-screen flex-col top-0 h-screen items-center z-50">
+          <h4 class="text-3xl animtitle font-bold tracking-wider font-['Poppins'] text-black">
+            emmanuelngoka
+          </h4>
+          <div class="flex flex-col items-center text-4xl font-medium">
+            <h4 class="flip">FRONTEND DEV</h4>
+            <h4 class="flip">BACKEND DEV</h4>
+            <h4 class="flip">NEXTJS</h4>
+            <h4 class="flip">NODEJS</h4>
+            <h4 class="flip">PRISMA</h4>
+          </div>
+        </div>
+      </div>
       <header class="w-full">
         <nav class="flex items-center px-20 w-full absolute p-7 text-white">
           <div>
@@ -25,9 +46,10 @@
       >
         <div class="space-y-3">
           <h4 class="text-white/75 text-sm">Hello, I'm Emmanuel</h4>
-          <h4 class="text-6xl caption w-[630px] intro-text">
-            I Build Scalable Full Stack Web-Applications
-          </h4>
+          <div class="text-6xl caption w-[630px] text-white">
+            <div class="overflow-hidden text-6xl"><h4 class="intro">I Build Scalable Full</h4></div>
+            <div class="overflow-hidden text-6xl "><h4 class="intro intro-text">Stack Web-Applications</h4></div>
+          </div>
           <p class="w-[400px] text-sm text-white/75 pt-3 leading-6">
             I'm a full stack web developer from Nigeria. I learn and use modern
             technologies to make the web fun. Take the tour through my
@@ -62,7 +84,7 @@
               <path d="M15 12v-3" />
             </svg>
           </div>
-          <div class="stack absolute main bg-white translate-y-24 right-20 p-3">
+          <div class="stack absolute main bg-white top-24 right-20 p-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="60"
@@ -88,7 +110,7 @@
               />
             </svg>
           </div>
-          <div class="stack side translate-x-28 -translate-y-12 absolute">
+          <div class="stack side translate-x-28 -top-12 absolute">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="sidefill"
@@ -119,7 +141,7 @@
               <path d="M5 16V9h14V2H5l14 14h-7m-7 0l7 7v-7m-7 0h7"></path>
             </svg>
           </div>
-          <div class="stack side absolute translate-x-32 translate-y-32">
+          <div class="stack side absolute translate-x-32 top-32">
             <svg
               width="30"
               height="30"
@@ -134,9 +156,7 @@
               />
             </svg>
           </div>
-          <div
-            class="stack side absolute bottom-0 translate-x-56 -translate-y-16"
-          >
+          <div class="stack side absolute bottom-0 translate-x-56">
             <svg
               class="sidefill"
               xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +173,7 @@
               />
             </svg>
           </div>
-          <div class="stack side absolute translate-y-40">
+          <div class="stack side absolute top-40">
             <svg
               width="30"
               height="30"
@@ -168,7 +188,7 @@
               />
             </svg>
           </div>
-          <div class="stack side absolute translate-y-10 translate-x-48">
+          <div class="stack side absolute top-10 translate-x-48">
             <svg
               viewBox="-4 0 264 264"
               xmlns="http://www.w3.org/2000/svg"
@@ -203,11 +223,12 @@
       </section>
       <!-- about section -->
       <section
+        id="about"
         class="about-bg px-20 justify-center items-center gap-20 w-screen text-white h-screen flex"
       >
         <div class="w-full">
           <h4 class="text-4xl font-medium">Who am I?</h4>
-          <p class="mt-10 leading-6 text-white/[0.80] text-sm">
+          <p class="mt-10 bio opacity-0 leading-6 text-sm">
             I am Emmanuel Ngoka, a full stack developer with a passion for
             building robust web applications. With years of experience, I have
             developed a diverse skill set that includes Javascript and Python,
@@ -223,9 +244,11 @@
             is also one of my biggest strengths.
           </p>
         </div>
-        <div class="w-full text-center blog-ad">
-          <div class="w-96 p-10 flex flex-col items-center gap-5 rounded-xl">
-            <h4 class="text-3xl">I write too</h4>
+        <div class="w-full flex gap-10 text-center flex-col mt-96 blog-ad">
+          <div
+            class="w-96 p-10 card flex flex-col items-center gap-5 rounded-xl"
+          >
+            <h4 class="text-3xl font-medium">I write too</h4>
             <p class="text-sm">
               Stay ahead of the curve with my web development blog! I cover the
               latest technologies and trends in front-end and back-end web
@@ -246,7 +269,9 @@
         class="h-screen bg-black w-screen text-white font-['grotesk'] tracking-wider overflow-hidden"
       >
         <h4 class="p-20 font-medium text-xl py-10">Selected Projects</h4>
-        <div class="flex w-[300%] projects-container gap-20">
+        <div
+          class="flex w-[300%] projects-container justify-center h-full gap-20"
+        >
           <!-- project items  -->
           <!-- netflix  -->
           <div class="project relative">
@@ -319,22 +344,19 @@
           <!-- anonymessage  -->
           <div class="project relative">
             <div class="image-container relative h-full w-[300px] ml-auto">
-              <div
-                class="absolute bg-black/25 top-0 left-0 w-full h-full z-10"
-              ></div>
               <img src="./assets/images/ambg.jpg" alt="" />
             </div>
-            <div class="project-description p-10">
+            <div class="project-description">
               <h4
                 class="font-medium text-3xl font-['grotesk'] tracking-wider mb-5"
               >
-                netflix clone
+                anonymessage
               </h4>
               <p class="">
                 An anonymous messaging platform perfect for polls, elections or
                 just for fun.
               </p>
-              <div class="flex gap-3 mt-5 stack-bullets">
+              <div class="flex flex-wrap gap-3 mt-5 stack-bullets">
                 <button>ReactJS</button>
                 <button>TailwindCSS</button>
                 <button>NodeJS</button>
@@ -348,24 +370,39 @@
         </div>
       </section>
       <!-- contact section  -->
-      <section class="px-20 pt-40 h-screen relative">
-        <h4 class="text-5xl font-medium">Entertained?</h4>
-        <div class="mt-5 text-xl ">
+      <section
+        class="px-20 pt-40 h-screen text-center bg-black text-white flex flex-col items-center relative"
+      >
+        <h4 class="text-5xl font-['grotesk']">Get in touch</h4>
+        <div class="mt-5 w-fit">
           <p class="w-[500px]">
             Thank you for checking me out! I am currently looking to join a team
-            of creative and innovative web developers to share ideas
-            and solve problems. I am also looking for freelance developer
-            opportunities.
+            of creative and innovative web developers to share ideas and solve
+            problems. I am also looking for freelance developer opportunities.
           </p>
-          <br>
-          <p>If you think I'll be a good fit for your firm or project,</p>
-          <div class="flex mt-5 items-center text-white gap-3">
-            <a href="tel:+2348176428632"><button class="p-3 px-5 bg-black rounded-full">Give me a call</button></a>
-            <h4 class="text-black">or</h4>
-            <a href="mailto:emmanuelngoka778@gmail.com"><button class="p-3 bg-black px-5 rounded-full"> Send me a mail</button></a>
+          <br />
+          <div class="flex mt-5 items-center justify-center text-white gap-3">
+            <a href="tel:+2348176428632"
+              ><button class="p-3 px-5 bg-white text-black rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+                </svg>                
+              </button></a
+            >
+            <a href="mailto:emmanuelngoka778@gmail.com"
+              ><button class="p-3 bg-white text-black px-5 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+                
+              </button></a
+            >
           </div>
         </div>
-        <div class="bottom-10 text-xl absolute flex flex-col gap-3"><h4>DESIGNED AND DEVELOPED BY EMMANUEL NGOKA</h4></div>
+        <div class="bottom-10 absolute flex flex-col gap-3">
+          <h4>DESIGNED AND DEVELOPED BY EMMANUEL NGOKA</h4>
+        </div>
       </section>
     </div>
     <script type="module" src="/main.js"></script>
